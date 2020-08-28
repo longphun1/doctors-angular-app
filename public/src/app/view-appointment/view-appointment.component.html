@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="header">
+        <button style="margin-left: 1020px;" class="btn btn-dark" (click)="home()">Back to All</button>
+    </div>
+    <div class="box" *ngIf="app != null">
+        <ul class="list-group">
+            <li style="size: 30px;" class="list-group-item disabled">Appointment Informations</li>
+            <li class="list-group-item">First Name: {{app.first_name}}</li>
+            <li class="list-group-item">Last Name: {{app.last_name}}</li>
+            <li class="list-group-item">Age: {{app.age}}</li>
+            <li class="list-group-item">Time: {{app.time}}</li>
+            <li class="list-group-item">Comment: {{app.comment}}</li>
+            <li class="list-group-item">{{app.note}}</li>
+        </ul>
+        <button style="margin-left: 200px; margin-top: 20px;" type="button" class="btn btn-primary" (click)="addNote(app._id)">Add/Change a Note</button>
+    </div>
+</body>
+
+</html>

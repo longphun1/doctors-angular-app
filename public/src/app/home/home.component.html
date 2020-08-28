@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rapid Bootstrap Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <header id="header">
+            <div style="margin-left: 900px;" class="links-container">
+                <div class="logo float-left">
+                    <h1 class="text-light"><a href="#intro" class="scrollto"><span>Psychology</span></a></h1>
+                </div>
+                <nav class="main-nav float-right d-none d-lg-block">
+                    <ul>
+                        <li *ngIf="user.admin === false"><a routerLink="/users/appointment">Make an appointment</a></li>
+                        <li *ngIf="user.admin === false"><a routerLink="/users/edit/:id" (click)="goToEdit(user.id)">View
+                                Profile</a></li>
+                        <li *ngIf="user.admin === true"><a routerLink="/users/appointment/all">View all appointments</a>
+                        </li>
+                        <li *ngIf="user.admin === true"><a routerLink="/patients">View all patients</a></li>
+                        <li><a routerLink="/login">Log out</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section id="intro" class="clearfix">
+            <div class="body-container">
+                <div style="margin-left: 100px;" class="container d-flex h-100">
+                    <div class="row justify-content-center align-self-center">
+                        <div class="col-md-6 intro-info order-md-first order-last" *ngIf="user != null">
+                            <h2>Welcome<br>to the homepage <span>{{user.first_name}}!</span></h2>
+                            <div>
+                                <a href="#about" class="btn-get-started scrollto" routerLink="/home">Contact Us!</a>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-6 intro-img order-md-last order-first">
+                            <img src="img/intro-img.svg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div style="display: inline-block;">
+                    <img class="img1" src="https://c.files.bbci.co.uk/7F43/production/_107797523_gettyimages-965851348.jpg"
+                        height="400px;" width="600px;" alt="">
+                </div>
+                <div class="quotes">
+                    <div>
+                        <h4>“If you deliberately plan on being less than you are capable of being, then I warn you that you’ll
+                            be unhappy for the rest of your life.” –Abraham Maslow</h4>
+                    </div>
+                    <div>
+                        <h4>“Probably the biggest insight… is that happiness is not just a place, but also a process. Happiness
+                            is an ongoing process of fresh challenges, and it takes the right attitudes and activities to
+                            continue to be happy.” –Ed Diener</h4>
+                    </div>
+                    <div>
+                        <h4>
+                            “Even a happy life cannot be without a measure of darkness, and the word happy would lose its
+                            meaning if it were not balanced by sadness.” –Carl G. Jung
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/mobile-nav/mobile-nav.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

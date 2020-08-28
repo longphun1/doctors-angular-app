@@ -1,0 +1,7 @@
+.list-group {
+    width: 800px;
+    height: 500px;
+    overflow-y: auto;
+    margin-left: 330px;
+    margin-top: 50px;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div style="margin-top: 50px;" class="box" *ngIf="user != null">
+        <ul class="list-group">
+            <li style="size: 30px;" class="list-group-item disabled">Patients Informations</li>
+            <li class="list-group-item">Name: {{user.first_name}} {{user.last_name}}</li>
+            <li class="list-group-item">Age: {{user.age}}</li>
+            <li class="list-group-item">Address: {{user.address}}</li>
+            <li class="list-group-item">Phone: {{user.phone}}</li>
+        </ul>
+    </div>
+    <button style="margin-left: 600px; margin-top: 20px;" class="btn btn-dark" (click)="back()">Back to All Patients</button>
+</body>
+
+</html>

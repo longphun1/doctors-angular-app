@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        </head>
+        
+        <div class="container">
+            <h1 class="header">Update your profile</h1>
+            <form (submit)="submit()">
+                <h4>Name: </h4>
+                <input type="text" class="form-control" name="name" placeholder="Your name" [(ngModel)]="user.first_name">
+                <h4>Last Name: </h4>
+                <input type="text" class="form-control" name="last_name" placeholder="Your last name" [(ngModel)]="user.last_name">
+                <h4>Date of Birth: </h4>
+                <input type="text" class="form-control" name="age" placeholder="Your date of birth" [(ngModel)]="user.age">
+                <h4>Address: </h4>
+                <input type="text" class="form-control" name="address" placeholder="Your address" [(ngModel)]="user.address">
+                <h4>Phone Number: </h4>
+                <input type="text" class="form-control" name="phone" placeholder="Your phone number, Ex: (555) 333-4444" [(ngModel)]="user.phone">
+                <div class="button-container">
+                    <button type="button" id="button"  class="btn btn-info" (click)="handleCancel()">Cancel</button>
+                    <button id="button" class="btn btn-info">Confirm Edit</button>
+                </div>
+            </form>
+        </div>
+    </html>

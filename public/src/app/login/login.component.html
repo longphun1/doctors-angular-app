@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    .header{
+        font-size: 50px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h1 class="regi" style="color:rgb(149, 160, 170)">Registration</h1>
+            <div class="register">
+                <form (submit)="register()">
+                    <div>
+                        <label>First Name:</label>
+                        <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter first name" [(ngModel)]="newUser.first_name">
+                    </div>
+                    <div>
+                        <label>Last Name:</label>
+                        <input type="text" name="last_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter last name" [(ngModel)]="newUser.last_name">
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="newUser.email">
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter password" [(ngModel)]="newUser.password">
+                    </div>
+                    <button class="btn btn-primary" style="margin-top: 30px">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="right">
+            <h1 class="log" style="color:rgb(149, 160, 170)">Login</h1>
+            <div class="login">
+                <form (submit)="login()">
+                    <div>
+                        <label>Email:</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="user.email">
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter password" [(ngModel)]="user.password">
+                    </div>
+                    <button class="btn btn-primary" style="margin-top: 30px">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

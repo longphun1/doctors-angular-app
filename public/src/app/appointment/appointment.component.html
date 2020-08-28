@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Make An Appointment</h1>
+        <form (submit)="submit()">
+            <div class="form-row">
+                <div class="col">
+                    <input class="input" type="text" class="form-control" placeholder="First name" name="name"
+                        [(ngModel)]="app.first_name">
+                </div>
+                <div class="col">
+                    <input class="input" type="text" class="form-control" placeholder="Last name" name="last_name"
+                        [(ngModel)]="app.last_name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input class="input" type="string" class="form-control" placeholder="Date of Birth" name="age" [(ngModel)]="app.age">
+                </div>
+                <div class="col">
+                    <input class="input" type="date" min="2019-11-22" class="form-control" placeholder="Date" name="date" [(ngModel)]="app.time">
+                </div>
+            </div>
+            <div class="col">
+                <textarea class="comment" id="message" name="message" cols="60" rows="3" placeholder="  Add a comment" [(ngModel)]="app.comment"></textarea>
+            </div>
+            <div class="button">
+                <button style="margin-right: 10px;" type="button" class="btn btn-info" (click)="cancel()">Go Back To Home</button>
+                <button class="btn btn-info">Shedule Your Appointment</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+

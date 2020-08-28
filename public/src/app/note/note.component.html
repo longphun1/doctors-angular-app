@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <form (submit)="submit()">
+        <div class="jumbotron" *ngIf="app != null">
+            <h1 style="text-align: center" class="display-4">Create a note for {{app.first_name}}</h1>
+            <hr class="my-4">
+            <div class="box">
+                <textarea name="note" id="" cols="80" rows="6" placeholder="Add notes here"
+                    [(ngModel)]="app.note"></textarea>
+                <div class="button">
+                    <button class="btn btn-success">Submit Note</button>
+                    <button style="margin-left: 10px;" type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

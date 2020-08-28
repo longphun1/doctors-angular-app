@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="header">Make Payments</h1>
+    <div class="container">
+        <form (submit)="submit()">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Full Name on Card" name="name"
+                        [(ngModel)]="card.name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input type="number" class="form-control" placeholder="16 Digits Card Number" name="number"
+                        [(ngModel)]="card.number">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input type="number" class="form-control" placeholder="Exp" name="exp" [(ngModel)]="card.exp">
+                </div>
+                <div class="col">
+                    <input type="number" class="form-control" placeholder="CVV" name="cvv" [(ngModel)]="card.cv">
+                </div>
+            </div>
+            <div class="button">
+                <button class="btn btn-success" class="btn btn-success">Pay Now!</button>
+                <button style="margin-left: 10px;" class="btn btn-secondary" type="button" (click)="cancel()">Pay in the Office</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

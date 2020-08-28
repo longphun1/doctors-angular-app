@@ -1,0 +1,22 @@
+.container {
+    width: 30%;
+    margin-top: 10%;
+}
+
+.header {
+    text-align: center;
+}
+
+h4 {
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.button-container {
+    text-align: center;
+}
+
+#button {
+    margin-top: 2%;
+    margin-right: 2%;
+}
