@@ -1,12 +1,8 @@
 .jumbotron {
-    height: 800px;
-}
-
-.box {
-    margin-left: 340px;
+    height: 100vh;
+    text-align: center;
 }
 
 .button {
-    margin-left: 450px;
-    margin-top: 15px;
+    margin-top: 1%;
 }

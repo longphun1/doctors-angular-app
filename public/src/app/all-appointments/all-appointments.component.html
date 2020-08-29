@@ -11,16 +11,18 @@
 </head>
 
 <body>
-    <button style="margin-left: 1020px;" class="btn btn-dark" (click)="home()">Homepage</button>
-    <div class="list-group">
-        <button type="button" class="list-group-item list-group-item-action active">
-            All Appointments
-        </button>
-        <div *ngFor="let app of apps">
-            <button type="button" class="list-group-item list-group-item-action"
-                (click)="view(app._id)">{{app.first_name}} {{app.last_name}} has an appointment on {{app.time}}</button>
+    <button id="home-button" class="btn btn-dark" (click)="home()">Homepage</button>
+    <div class="container">
+        <div class="list-group">
+            <button type="button" class="list-group-item list-group-item-action active">
+                All Appointments
+            </button>
+            <div *ngFor="let app of apps">
+                <button type="button" class="list-group-item list-group-item-action"
+                    (click)="view(app._id)">{{app.first_name}} {{app.last_name}} has an appointment on {{app.time}}</button>
+            </div>
         </div>
-    </div>
+   </div>
 </body>
 
 </html>

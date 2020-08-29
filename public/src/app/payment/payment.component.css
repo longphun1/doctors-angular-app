@@ -1,18 +1,19 @@
 .container{
-    margin-left: 450px;
-    width: 800px;
+    width: 500px;
     min-height: 800px;
-   margin-top: 60px;
+    text-align: center;
+    margin-top: 3%;
+   
 }
 
 .form-row {
     width: 500px;
-    margin-bottom: 20px;
+    margin-bottom: 7%;
 }
 
 .header {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 3%;
 }
 
 .comment {
@@ -20,6 +21,3 @@
     margin-bottom: 20px;
 }
 
-.button {
-    margin-left: 147px;
-}

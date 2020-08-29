@@ -1,7 +1,14 @@
 .list-group {
-    width: 800px;
     height: 500px;
     overflow-y: auto;
-    margin-left: 330px;
-    margin-top: 50px;
+}
+
+.container {
+    margin-top: 5%;
+    text-align: center;
+    width: 800px;
+}
+#home-button {
+    margin-left: 80%;
+    margin-top: 3%;
 }

@@ -11,14 +11,16 @@
 </head>
 
 <body>
-    <button style="margin-left: 1020px;" class="btn btn-dark" (click)="back()">Homepage</button>
-    <div class="list-group">
-        <button type="button" class="list-group-item list-group-item-action active">
-            All Patients
-        </button>
-        <div *ngFor="let user of users">
-            <button type="button" class="list-group-item list-group-item-action"
-                (click)="view(user._id)">{{user.first_name}} {{user.last_name}}</button>
+    <button id="home-button" class="btn btn-dark" (click)="back()">Homepage</button>
+    <div class="container">
+        <div class="list-group">
+            <button type="button" class="list-group-item list-group-item-action active">
+                All Patients
+            </button>
+            <div *ngFor="let user of users">
+                <button type="button" class="list-group-item list-group-item-action"
+                    (click)="view(user._id)">{{user.first_name}} {{user.last_name}}</button>
+            </div>
         </div>
     </div>
 </body>

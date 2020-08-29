@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div style="margin-top: 50px;" class="box" *ngIf="user != null">
+    <div class="container" *ngIf="user != null">
         <ul class="list-group">
             <li style="size: 30px;" class="list-group-item disabled">Patients Informations</li>
             <li class="list-group-item">Name: {{user.first_name}} {{user.last_name}}</li>
@@ -19,8 +19,8 @@
             <li class="list-group-item">Address: {{user.address}}</li>
             <li class="list-group-item">Phone: {{user.phone}}</li>
         </ul>
+        <button id="back-button" class="btn btn-dark" (click)="back()">Back to All Patients</button>
     </div>
-    <button style="margin-left: 600px; margin-top: 20px;" class="btn btn-dark" (click)="back()">Back to All Patients</button>
 </body>
 
 </html>
